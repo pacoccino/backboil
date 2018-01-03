@@ -1,0 +1,10 @@
+node_modules
+yarn-error.log
+package-lock.json
+.DS_Store
+.idea
+.env
+.env.local
+.nyc_output
+coverage
+apidoc

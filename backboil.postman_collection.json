@@ -1,0 +1,143 @@
+{
+	"info": {
+		"name": "backboil",
+		"_postman_id": "e1cd86e6-5120-bf03-082f-5b53fe1146a9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Shops - Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/shop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shop"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Shops - Add new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "boite",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Rue",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "coucountry",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "iso",
+							"value": "ABC",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "1.312",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "lng",
+							"value": "2.3",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "postcode",
+							"value": "33000",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+33123456789",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ads1",
+							"value": "hey!",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ads2",
+							"value": "Ho!",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/shop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shop"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "42291dbc-e3f8-4998-993d-25ce13e49020",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ae4fdc77-ba3f-43d3-83d9-f55d58f6dcba",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

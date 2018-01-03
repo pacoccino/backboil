@@ -1,0 +1,32 @@
+{
+  "name": "Backboil",
+  "description": "Backend boilerplate",
+  "repository": "https://github.com/pakokrew/backboil",
+  "env": {
+    "ENVIRONMENT": {
+      "description": "Your server environment",
+      "required": true
+    },
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-redis:hobby-dev"
+    },{
+      "plan": "heroku-postgresql:hobby-dev"
+    }
+  ],
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "success_url": "/",
+  "website": "https://website.com"
+}

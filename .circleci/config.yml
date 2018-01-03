@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+
+    working_directory: ~/repo
+
+    docker:
+      - image: circleci/node:8.9.0
+
+    steps:
+      - checkout
+
+      - run: npm i yarn
+
+# Caching node_modules
+      - restore_cache:
+          keys:
+          - dependency-cache-{{ checksum "yarn.lock" }}-{{ checksum "package.json" }}
+
+      - run: npx yarn
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependency-cache-{{ checksum "yarn.lock" }}-{{ checksum "package.json" }}
+
+
+# Testing
+
+      - run: npm test
+
+# Storing artifacts
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
